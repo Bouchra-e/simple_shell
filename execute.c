@@ -43,11 +43,11 @@ while (1)
 printf("$ ");
 if (fgets(buffer, MAX_BUFFER_SIZE, stdin) == NULL)
 break;
-      
+
 buffer[strcspn(buffer, "\n")] = '\0';
 
 pid = fork();
-      
+
 if (pid == -1)
 {
 perror("fork error");
@@ -66,7 +66,7 @@ exit(EXIT_FAILURE);
 else
 {
 int status;
-if (wait(&status) == -1) 
+if (wait(&status) == -1)
 {
 perror("wait error");
 exit(EXIT_FAILURE);
