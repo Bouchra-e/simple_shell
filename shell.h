@@ -4,12 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/types.h>
 #include <sys/wait.h>
 #include <string.h>
 
-void display_prompt(void);
-void execute_command(char *command);
-void handle_command(char *command);
-int main(void);
+#define BUFFER_SIZE 1024
+#define MAX_BUFFER_SIZE 1024
+
+void run_shell();
 
 #endif /* SHELL_H */
